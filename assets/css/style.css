@@ -203,6 +203,10 @@ label, input, textarea {
   display: block;
 }
 
+label {
+  margin-bottom: 1.4em;
+}
+
 form p {
   margin-bottom: 6px;
 }
