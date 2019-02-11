@@ -251,7 +251,7 @@ p {
 .winCard, .loseCard {
   opacity: 0;
   transition: opacity .25s ease;
-  position: relative;
+  position: absolute;
 }
 
 .responseText {
