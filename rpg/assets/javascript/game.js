@@ -11,6 +11,7 @@ var rpgGame = {
     this.characters = [];
     this.playerChosen = null;
     this.enemyChosen = null;
+    this.attacking = false;
 
     var header = $('<header>');
     header.append('<image class="logo" alt="star wars logo" src="' + './assets/images/Star_Wars_Logo.png' + '">');
@@ -95,7 +96,6 @@ var rpgGame = {
       }
     })
     // update the chosen player stats
-    console.log(rpgGame.characters[rpgGame.playerChosen].currentAttack)
     $('.controls').find('.health').text(rpgGame.characters[rpgGame.playerChosen].health);
     $('.controls').find('.attackStat').text(rpgGame.characters[rpgGame.playerChosen].currentAttack);
   },
@@ -218,13 +218,12 @@ var rpgGame = {
       $('.attack').remove();
       setTimeout(function() {
         if (this.checkIfAllDefeated()) {
-          this.restartGameButton('Play again');
           $('.attackBar').append('<button onclick="rpgGame.setupGame()">You won! Play again?</button>');
         } else {
           this.continueGame();
           $('.instructions').text('Choose your foe.');
         }
-      }.bind(this), 1200);
+      }.bind(this), 500);
     }
 
     $('.disabled').removeClass('disabled');
