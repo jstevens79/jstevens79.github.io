@@ -318,7 +318,7 @@ button.disabled {
   cursor: default;
 }
 
-button:hover, button:active {
+button.disabled:hover, button.disabled:active {
   background: rgb(121, 168, 243);
   border-bottom: solid 6px #4373BF;
   border-right: solid 2px #4373BF;
