@@ -243,7 +243,12 @@ var rpgGame = {
     return allDefeated;
   },
 
-
 }
 
-rpgGame.setupGame();
+$(document).ready(function() {
+
+  rpgGame.setupGame();
+
+})
+
+
