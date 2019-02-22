@@ -134,8 +134,7 @@ var rpgGame = {
       .addClass('powerStats')
       .append("<div class='stats'><i class='fas fa-heart'></i></i> <span class='health'>" + player.health + "</span> <span class='blue'>// Attack Power: <span class='attackStat'>" + player.currentAttack + "</span><span></div>"); 
     
-
-    $('.controls').append(yourPlayer).append(playerPic).append(playerName).append(powers);
+    $('.controls').append(yourPlayer, playerPic, playerName, powers);
   },
   
   chooseEnemy: function (a) {
@@ -154,7 +153,7 @@ var rpgGame = {
       var attackArea = $('<div>').addClass('attackBar');
       var attackButton = $('<button>').addClass('attack').text('Attack');
       attackArea.append(attackButton);
-      battle.append(player).append(enemy).append(attackArea);
+      battle.append(player, enemy, attackArea);
       $('.battleArea').append(battle);
 
       $('.attack').click(function () {
