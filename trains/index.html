@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="./assets/styles/reset.css" rel="stylesheet">
+  <link href="./assets/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">Train Depot</h1>
+    <div id="trainSchedule">
+      <div id="trains">
+        <div class="trainRowHeader">
+          <div class="trainName">Train Name</div>
+          <div class="trainDestination">Destination</div>
+          <div>Frequency</div>
+          <div>Next Arrival</div>
+          <div>Minutes Away</div>
+          <div class="editSettings"></div>
+        </div>
+      </div>
+      <button id="add-train">Add Train <i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/scripts/database.js"></script>
+  <script src="./assets/scripts/buttons.js"></script>
+  <script src="./assets/scripts/app.js"></script>
+</body>
+</html>
