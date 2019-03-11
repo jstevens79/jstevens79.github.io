@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Plan It</title>
+	<link href="./assets/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+  	<div id="calendar">
+			<div id="calendar-form">
+				<!-- calendar form goes here-->
+				<input id="date-picker" placeholder="mm/dd/yyyy">
+				]<input id="time-picker" placeholder="hh:mm">
+			</div>
+		</div><!-- end calendar-->
+
+		<div id="yelp">
+			<div id="yelp-form">
+				<!-- yelp form goes here-->
+			</div>
+			<div id="yelp-results">
+				<!-- yelp results go here-->
+			</div>
+		</div><!-- end yelp -->
+
+
+		<div id="created-event">
+			<!-- the selected event details will go here.-->
+			<div id="friends"></div>
+		</div>
+
+		<div id="transportation">
+			<!-- transportation info here...-->
+		</div>
+
+	</div>
+
+	</div><!-- end wrapper-->
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="./assets/scripts/firebase.js"></script>
+	<script src="./assets/scripts/calendar.js"></script>
+	<script src="./assets/scripts/yelp.js"></script>
+	<script src="./assets/scripts/transportation.js"></script>
+</body>
+</html>
