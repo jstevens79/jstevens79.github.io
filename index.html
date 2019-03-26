@@ -1,45 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <title>Joshua Stevens: Portfolio Site</title>
-</head>
-<body>
-  <header>
-    <div class="headerContentWrapper">
-        <h1 class="logo">Joshua Stevens</h1>
-        <nav>
-          <ul class="navLinks">
-            <li>
-              <a class="active" href="index.html">About</a>
-            </li>
-            <li>
-              <a href="portfolio.html">Portfolio</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-    </div>
-  </header>
-  <div class="contentWrapper">
-    <section>
-      <article>
-        <h1>About Me</h1>
-        <img class="profilePic" src="assets/images/IMG_0099.jpg">
-        <p>I was born in middle-of-nowhere Indiana, surrounded by cows and corn. Bored with the prospects of farm life, I focused my energies on art and music.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300,400"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <title>Joshua Stevens</title>
+  </head>
 
-        <p>I started off my adult life pursuing a career in youth ministry but found myself spending all my free time doing graphic design. Eventually, I made it my full-time focus and took a job as a web designer, learning how to code HTML and CSS on the job.</p>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./assets/images/js-logo.png" alt="joshua stevens logo">
+        </div>
+        <div class="navigationLinks">
+          <a class="navigationLink" data-target="bio" href="#">About Me</a>
+          <a class="navigationLink" data-target="development" href="#"
+            >Projects</a
+          >
+          <a class="navigationLink" data-target="contact" href="#">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <div class="pageWrapper">
+      <section id="home">
+        <div class="codeImage text parallax" data-speed="38">
+          <h1 id="titleText">Joshua Stevens</h1>
+        </div>
+        <div class="codeImage subtext parallax" data-speed="18">
+          <h2 id="subTitleText"><span class="green">{</span> A web <span class="purple">developer</span> &amp; designer in Nashville <span class="green">}</span></h2>
+        </div>
+        <div class="codeImage green parallax" data-speed="52"></div>
+        <div class="codeImage blue parallax" data-speed="38"></div>
+        <div class="codeImage red parallax" data-speed="22"></div>
+        <div class="codeImage purple parallax" data-speed="3"></div>
+        <div class="codeImage gray parallax" data-speed="12"></div>
+      </section>
+      <section id="bio">
+        <article>
+          <div class="profilePicture">
+            <img src="./assets/images/josh-and-his-dog.jpg" class="profilePic" alt="Joshua Stevens and his dog."> 
+          </div>
+          <div class="articleContent">
+            <h2>Design &amp; Development</h2>
+            <p>
+              I’m a highly creative and accomplished <span class="red">digital creator</span> capable of designing <span class="purple">engaging UI and UX</span> experiences as well as writing code to
+              bring designs to life.</p>
+            <p>
+              With <span class="green">ten years of experience</span> in web <span class="blue">design</span>
+              and <span class="red">development</span>, I’ve built numerous websites and Saas applications
+              using front-end technologies like <span class="gray">HTML</span>, <span class="green">JavaScript</span>, and <span class="blue">React</span>.
+              Exceptional interpersonal skills, work ethic and an <span class="purple">eager-to-learn</span> attitude have propelled my career. I am continuing to stretch
+              myself, focusing on bolstering my <span class="red">back-end</span> know-how.
+            </p>
+            <p>See some of of my work:</p>
+            <a class="dribbble" href="http://joshuastevens.dribbble.com/" target="_blank">Dribbble <i class="fab fa-dribbble"></i></a>
+            <a class="github" href="https://github.com/jstevens79" target="_blank">GitHub <i class="fab fa-github"></i></a>
+          </div>
+        </article>
+      </section>
+      <section id="development">
+        <h2><span class="purple">{</span> Development Projects <span class="purple">}</span></h2>
+        <p>
+          Here are some of my most recent projects, done for a coding bootcamp I
+          am a part of.
+        </p>
+        <div class="projectsContainer">
+          <div class="project">
+            <div class="projectIcon"><i class="fas fa-gamepad"></i></div>
+            <div class="description">
+              <h3>Avengers: Assemble Words</h3>
+              <p>A word guessing game with a fun theme. Beware Thanos's snap!</p>
+              <a href="https://jstevens79.github.io/Word-Guess-Game/" target="_blank" class="view">View</a>
+              <a href="https://github.com/jstevens79/Word-Guess-Game" target="_blank" class="viewCode">View Code</a>
+            </div>
+            <div class="technologies">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="projectIcon"><i class="fas fa-jedi"></i></div>
+            <div class="description">
+              <h3>STAR WARS: RPG</h3>
+              <p>A simple RPG game built with HTML and JavaScript. Can you defeat all opponents?</p>
+              <a href="https://jstevens79.github.io/star-wars-rpg/" target="_blank" class="view">View</a>
+              <a href="https://github.com/jstevens79/star-wars-rpg" target="_blank" class="viewCode">View Code</a>
+            </div>
+            <div class="technologies">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+            </div>
+
+          <div class="project">
+            <div class="projectIcon"><i class="fas fa-ticket-alt"></i></div>
+            <div class="description">
+              <h3>Movie Trivia</h3>
+              <p>How well do you know movies? Find out in this challenging quiz.</p>
+              <a class="view" href="https://jstevens79.github.io/TriviaGame/" target="_blank">View</a>
+              <a href="https://github.com/jstevens79/TriviaGame" target="_blank" class="viewCode">View Code</a>
+            </div>
+            <div class="technologies">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                  <li>JSON</li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="project">
+              <div class="projectIcon"><i class="fas fa-images"></i></div>
+              <div class="description">
+                <h3>GifTastic</h3>
+                <p>See trending gifs from Giphy, add gifs by topic, and manage your list.</p>
+                <a class="view" href="https://jstevens79.github.io/giftastic/" target="_blank">View</a>
+                <a href="https://github.com/jstevens79/GifTastic" target="_blank" class="viewCode">View Code</a>
+              </div>
+              <div class="technologies">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>AJAX</li>
+                    <li>LocalStorage</li>
+                  </ul>
+                </div>
+            </div>
+
+          <div class="project">
+            <div class="projectIcon"><i class="fas fa-subway"></i></div>
+            <div class="description">
+              <h3>Train Scheduler</h3>
+              <p>Add trains, choose their start time and frequency and see their next arrival times in real-time, using Firebase.</p>
+              <a class="view" href="https://jstevens79.github.io/Train-Scheduler/" target="_blank">View</a>
+              <a href="https://github.com/jstevens79/Train-Scheduler" target="_blank" class="viewCode">View Code</a>
+            </div>
+            <div class="technologies">
+                <ul>
+                  <li>HTML</li>
+                  <li>Javascript</li>
+                  <li>CSS</li>
+                  <li>Firebase</li>
+                  <li>Moment.js</li>
+                </ul>
+              </div>
+          </div>
           
-        <p>Through the years, I've become more focused on development, and am looking forward to understanding the backend as well as I do the front so that I can bring my creative ideas to life.</p>
-      </article>
-    </section>
-  </div>
-  <footer>Copright &copy; 2019</footer>
-</body>
+          <div class="project">
+              <div class="projectIcon"><i class="fas fa-calendar-check"></i></div>
+              <div class="description">
+                <h3>PlanIt</h3>
+                <p>A small social-planning app that lets you choose create events, add friends and see their response in real-time.</p>
+                <a class="view" href="https://jstevens79.github.io/Project1/" target="_blank">View</a>
+                <a href="https://github.com/jstevens79/Project1" target="_blank" class="viewCode">View Code</a>
+              </div>
+              <div class="technologies">
+                  <ul>
+                    <li>HTML</li>
+                    <li>Javascript</li>
+                    <li>CSS</li>
+                    <li>AJAX Requests</li>
+                    <li>Firebase</li>
+                  </ul>
+                </div>
+            </div>
+
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Interested in working with me?</p>
+        <div class="contactLinks">
+            <a href="mailto:joshua@joshuastevensdesign.com" class="email">Email Me <i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/joshuastevens79/" target="_blank" class="linkedIn">Connect on LinkedIn <i class="fab fa-linkedin"></i></a>
+            <a href="./assets/pdf/Joshua_Stevens_Resume_2019.pdf" target="_blank" class="resume">View my resume <i class="fas fa-file"></i></i></a>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/scripts/parallax-effect.js"></script>
+    <script src="./assets/scripts/page-scripts.js"></script>
+  </body>
 </html>

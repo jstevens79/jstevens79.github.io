@@ -1,0 +1,442 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #282c34;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+}
+
+section {
+  min-height: 100vh;
+  padding: 88px 20px 20px 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(97,175,239);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+nav {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: #282c34;
+}
+
+.navigationLink {
+  color: #282c34;
+}
+
+.navigationLink:hover {
+  color: rgb(97,175,239);
+}
+
+.navigationLink:active {
+  color: rgb(73, 137, 189);
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigationLinks {
+  display: flex;
+}
+
+.navigationLink {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: block;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.blue {
+  color: rgb(97,175,239);
+}
+.red {
+  color: rgb(224,108,117);
+}
+.green {
+  color: rgb(152,195,121);
+}
+.purple {
+  color: rgb(206, 165, 88);
+}
+.gray {
+  color: rgb(171,178,191);
+}
+
+
+
+#home {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  position: relative;
+}
+
+.codeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.codeImage.text {
+  z-index: 500;
+}
+
+.codeImage.subtext {
+  z-index: 450;
+}
+
+.codeImage.green {
+  z-index: 100;
+  background-image: url('../images/greenText.png');
+}
+
+.codeImage.blue {
+  z-index: 200;
+  background-image: url('../images/blueText.png');
+}
+
+.codeImage.red {
+  z-index: 300;
+  background-image: url('../images/redText.png');
+}
+
+.codeImage.purple {
+  z-index: 400;
+  background-image: url('../images/purpleText.png');
+}
+
+.codeImage.gray {
+  z-index: 0;
+  background-image: url('../images/grayText.png');
+}
+
+
+#titleText {
+  position: absolute;
+  top: 62vh;
+  left: 10%;
+  font-size: 9vw;
+  color: rgb(255,255,255);
+  text-shadow:
+    -4px -4px 0 #282c34,  
+    4px -4px 0 #282c34,
+    -4px 4px 0 #282c34,
+     4px 4px 0 #282c34;
+}
+
+#subTitleText {
+  position: absolute;
+  left: 10%;
+  background: #16191d;
+  top: 70vh;
+  font-size: 2vw;
+  padding: .75vw 1vw;
+}
+
+article {
+  display: flex;
+}
+
+.profilePicture {
+  flex: 1;
+  max-width: 380px;
+  position: relative;
+  margin: 0 5% 5% 5%;
+}
+
+.profilePic {
+  width: 100%;
+  height: auto;
+  margin: 0 5% 5% 5%;
+}
+
+.articleContent {
+  flex: 2;
+  max-width: 650px;
+}
+
+#development {
+  text-align: center;
+}
+
+.projectsContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.project {
+  width: calc(100% / 3.2);
+  background: rgba(51,56,66,1);
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color .25s ease;
+}
+
+.project:hover {
+  background: rgb(84, 92, 109);
+}
+
+.project p {
+  padding: 10px 20px 20px 10px;
+  font-size: .9em;
+}
+
+.project h4 {
+  margin-bottom: 10px;
+}
+
+.projectIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px auto;
+  font-size: 4vw;
+}
+
+.projectIcon i {
+  padding: 1vw;
+  border-radius: 50%;
+}
+
+.technologies {
+  background: #1f2329;
+  margin-top: 20px;
+}
+
+.technologies ul {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.technologies ul li {
+  font-size: .6em;
+  text-transform: uppercase;
+  padding: 2px 12px;
+  border-radius: 4px;
+  margin: 4px;
+  background-color: rgba(171,178,191,0.1);
+}
+
+
+
+.dribbble, .github {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  position: relative;
+  top: 0;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+  transition: background-color .2s ease, top .25s ease;
+}
+
+.dribbble {
+  background-color: rgb(97,175,239);
+  margin-right: 10px;
+}
+
+.github {
+  background-color: rgb(152,195,121);
+}
+
+.dribbble:hover {
+  background-color: rgb(118, 191, 250);
+}
+
+.github:hover {
+  background-color: rgb(182, 230, 149);
+}
+
+.dribbble:active {
+  background-color: rgb(84, 155, 212);
+  top: 3px;
+}
+
+.github:active {
+  background-color: rgb(124, 161, 97);
+  top: 3px;
+}
+
+.view {
+  margin: 5px;
+  color: white;
+  background-color: rgb(152,195,121);
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: .8em;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+}
+
+.view:hover {
+  background-color: rgb(182, 230, 149);
+}
+
+.view:active {
+  background-color: rgb(124, 161, 97);
+}
+
+.viewCode {
+  margin: 5px;
+  color: white;
+  background-color: rgb(171,178,191);
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: .8em;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+}
+
+.viewCode:hover {
+  background-color: rgb(183, 190, 204);
+}
+
+.viewCode:active {
+  background-color: rgb(121, 126, 136);
+}
+
+#contact {
+  text-align: center;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.email, .linkedIn, .resume {
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+  margin: 0 10px 10px 10px;
+}
+
+.email {
+  background-color: rgb(97,175,239);
+}
+
+.email:hover {
+  background-color: rgb(118, 191, 250);
+}
+
+.email:active {
+  background-color: rgb(84, 155, 212);
+}
+
+.linkedIn {
+  background-color: rgb(152,195,121);
+}
+
+.linkedIn:hover {
+  background-color: rgb(182, 230, 149);
+}
+
+.linkedIn:active {
+  background-color: rgb(124, 161, 97);
+}
+
+.resume {
+  background-color: rgb(171,178,191);
+}
+
+.resume:hover {
+  background-color: rgb(183, 190, 204);
+}
+
+.resume:active {
+  background-color: rgb(121, 126, 136);
+}
+
+@media only screen and (max-width: 860px) {
+  .project {
+    width: calc(100% / 2.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    min-height: 50vh;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .profilePicture {
+    flex: 0;
+    display: none;
+  }
+    
+  .articleContent {
+    flex: 2;
+    max-width: 650px;
+  }
+
+  .navigationLink {
+    font-size: .7em;
+    padding: 0 8px;
+  }
+  
+}
