@@ -14,11 +14,11 @@ body {
 
 section {
   min-height: 100vh;
-  max-height: 1200px;
   padding: 88px 20px 20px 20px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: auto;
 }
 
 
@@ -42,6 +42,18 @@ nav {
   justify-content: space-between;
   background: white;
   color: #282c34;
+}
+
+.navigationLink {
+  color: #282c34;
+}
+
+.navigationLink:hover {
+  color: rgb(97,175,239);
+}
+
+.navigationLink:active {
+  color: rgb(73, 137, 189);
 }
 
 h2 {
@@ -148,10 +160,10 @@ a {
   font-size: 9vw;
   color: rgb(255,255,255);
   text-shadow:
-    -2px -2px 0 rgba(97,175,239,0.8),  
-    2px -2px 0 rgba(97,175,239,0.8),
-    -2px 2px 0 rgba(97,175,239,0.8),
-     2px 2px 0 rgba(97,175,239,0.8);
+    -4px -4px 0 #282c34,  
+    4px -4px 0 #282c34,
+    -4px 4px 0 #282c34,
+     4px 4px 0 #282c34;
 }
 
 #subTitleText {
@@ -165,6 +177,7 @@ a {
 
 article {
   width: 40%;
+  max-width: 650px;
   margin-left: 50%;
 }
 
@@ -201,7 +214,7 @@ article {
 }
 
 .project p {
-  padding: 10px 20px;
+  padding: 10px 20px 20px 10px;
   font-size: .9em;
 }
 
@@ -209,13 +222,20 @@ article {
   margin-bottom: 10px;
 }
 
-.projectFeature {
-  display: block;
+.projectIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
-  background: white;
   border-radius: 50%;
   margin: 20px auto;
+  font-size: 4vw;
+}
+
+.projectIcon i {
+  padding: 1vw;
+  border-radius: 50%;
 }
 
 .technologies {
@@ -295,7 +315,6 @@ article {
   background-color: rgb(152,195,121);
   padding: 8px 10px;
   border-radius: 3px;
-  margin-top: 8px;
   font-size: .8em;
   text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
 }
