@@ -27,7 +27,6 @@ h1, h2, h3 {
   color: rgb(97,175,239);
 }
 
-
 header {
   position: fixed;
   width: 100%;
@@ -39,6 +38,7 @@ header {
 .logo img {
   max-height: 50px;
   width: auto;
+  cursor: pointer;
 }
 
 nav {
@@ -103,10 +103,7 @@ a {
   color: rgb(171,178,191);
 }
 
-.pageWrapper {
-  /*max-width: 1200px;*/
-  margin: 0 auto;
-}
+
 
 #home {
   height: 100vh;
@@ -182,9 +179,25 @@ a {
 }
 
 article {
-  width: 40%;
+  display: flex;
+}
+
+.profilePicture {
+  flex: 1;
+  max-width: 380px;
+  position: relative;
+  margin: 0 5% 5% 5%;
+}
+
+.profilePic {
+  width: 100%;
+  height: auto;
+  margin: 0 5% 5% 5%;
+}
+
+.articleContent {
+  flex: 2;
   max-width: 650px;
-  margin-left: 50%;
 }
 
 #development {
@@ -210,12 +223,10 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform: scale(1);
-  transition: transform .25s ease, background-color .25s ease;
+  transition: background-color .25s ease;
 }
 
 .project:hover {
-  transform: scale(1.05);
   background: rgb(84, 92, 109);
 }
 
@@ -265,17 +276,7 @@ article {
   background-color: rgba(171,178,191,0.1);
 }
 
-@media only screen and (max-width: 860px) {
-  .project {
-    width: calc(100% / 2.1);
-  }
-}
 
-@media only screen and (max-width: 600px) {
-  .project {
-    width: 100%;
-  }
-}
 
 .dribbble, .github {
   display: inline-block;
@@ -318,6 +319,8 @@ article {
 }
 
 .view {
+  margin: 5px;
+  color: white;
   background-color: rgb(152,195,121);
   padding: 8px 10px;
   border-radius: 3px;
@@ -325,3 +328,115 @@ article {
   text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
 }
 
+.view:hover {
+  background-color: rgb(182, 230, 149);
+}
+
+.view:active {
+  background-color: rgb(124, 161, 97);
+}
+
+.viewCode {
+  margin: 5px;
+  color: white;
+  background-color: rgb(171,178,191);
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: .8em;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+}
+
+.viewCode:hover {
+  background-color: rgb(183, 190, 204);
+}
+
+.viewCode:active {
+  background-color: rgb(121, 126, 136);
+}
+
+#contact {
+  text-align: center;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.email, .linkedIn, .resume {
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+  margin: 0 10px 10px 10px;
+}
+
+.email {
+  background-color: rgb(97,175,239);
+}
+
+.email:hover {
+  background-color: rgb(118, 191, 250);
+}
+
+.email:active {
+  background-color: rgb(84, 155, 212);
+}
+
+.linkedIn {
+  background-color: rgb(152,195,121);
+}
+
+.linkedIn:hover {
+  background-color: rgb(182, 230, 149);
+}
+
+.linkedIn:active {
+  background-color: rgb(124, 161, 97);
+}
+
+.resume {
+  background-color: rgb(171,178,191);
+}
+
+.resume:hover {
+  background-color: rgb(183, 190, 204);
+}
+
+.resume:active {
+  background-color: rgb(121, 126, 136);
+}
+
+@media only screen and (max-width: 860px) {
+  .project {
+    width: calc(100% / 2.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    min-height: 50vh;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .profilePicture {
+    flex: 0;
+    display: none;
+  }
+    
+  .articleContent {
+    flex: 2;
+    max-width: 650px;
+  }
+
+  .navigationLink {
+    font-size: .7em;
+    padding: 0 8px;
+  }
+  
+}
