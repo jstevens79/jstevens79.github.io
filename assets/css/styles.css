@@ -36,10 +36,16 @@ header {
   z-index: 1000;
 }
 
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
 nav {
-  padding: 20px;
+  padding: 5px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: white;
   color: #282c34;
 }
