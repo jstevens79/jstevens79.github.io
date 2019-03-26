@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #282c34;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+}
+
+section {
+  min-height: 100vh;
+  max-height: 1200px;
+  padding: 88px 20px 20px 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(97,175,239);
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  color: #282c34;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigationLinks {
+  display: flex;
+}
+
+.navigationLink {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: block;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.blue {
+  color: rgb(97,175,239);
+}
+.red {
+  color: rgb(224,108,117);
+}
+.green {
+  color: rgb(152,195,121);
+}
+.purple {
+  color: rgb(206, 165, 88);
+}
+.gray {
+  color: rgb(171,178,191);
+}
+
+.pageWrapper {
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+}
+
+#home {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  position: relative;
+}
+
+.codeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.codeImage.text {
+  z-index: 500;
+}
+
+.codeImage.subtext {
+  z-index: 450;
+}
+
+.codeImage.green {
+  z-index: 100;
+  background-image: url('../images/greenText.png');
+}
+
+.codeImage.blue {
+  z-index: 200;
+  background-image: url('../images/blueText.png');
+}
+
+.codeImage.red {
+  z-index: 300;
+  background-image: url('../images/redText.png');
+}
+
+.codeImage.purple {
+  z-index: 400;
+  background-image: url('../images/purpleText.png');
+}
+
+.codeImage.gray {
+  z-index: 0;
+  background-image: url('../images/grayText.png');
+}
+
+
+#titleText {
+  position: absolute;
+  top: 62vh;
+  left: 10%;
+  font-size: 9vw;
+  color: rgb(255,255,255);
+  text-shadow:
+    -2px -2px 0 rgba(97,175,239,0.8),  
+    2px -2px 0 rgba(97,175,239,0.8),
+    -2px 2px 0 rgba(97,175,239,0.8),
+     2px 2px 0 rgba(97,175,239,0.8);
+}
+
+#subTitleText {
+  position: absolute;
+  left: 10%;
+  background: #16191d;
+  top: 70vh;
+  font-size: 2vw;
+  padding: .75vw 1vw;
+}
+
+article {
+  width: 40%;
+  margin-left: 50%;
+}
+
+#development {
+  text-align: center;
+}
+
+.projectsContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.project {
+  width: calc(100% / 3.2);
+  background: rgba(51,56,66,1);
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: scale(1);
+  transition: transform .25s ease, background-color .25s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  background: rgb(84, 92, 109);
+}
+
+.project p {
+  padding: 10px 20px;
+  font-size: .9em;
+}
+
+.project h4 {
+  margin-bottom: 10px;
+}
+
+.projectFeature {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.technologies {
+  background: #1f2329;
+  margin-top: 20px;
+}
+
+.technologies ul {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.technologies ul li {
+  font-size: .6em;
+  text-transform: uppercase;
+  padding: 2px 12px;
+  border-radius: 4px;
+  margin: 4px;
+  background-color: rgba(171,178,191,0.1);
+}
+
+@media only screen and (max-width: 860px) {
+  .project {
+    width: calc(100% / 2.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project {
+    width: 100%;
+  }
+}
+
+.dribbble, .github {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  position: relative;
+  top: 0;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+  transition: background-color .2s ease, top .25s ease;
+}
+
+.dribbble {
+  background-color: rgb(97,175,239);
+  margin-right: 10px;
+}
+
+.github {
+  background-color: rgb(152,195,121);
+}
+
+.dribbble:hover {
+  background-color: rgb(118, 191, 250);
+}
+
+.github:hover {
+  background-color: rgb(182, 230, 149);
+}
+
+.dribbble:active {
+  background-color: rgb(84, 155, 212);
+  top: 3px;
+}
+
+.github:active {
+  background-color: rgb(124, 161, 97);
+  top: 3px;
+}
+
+.view {
+  background-color: rgb(152,195,121);
+  padding: 8px 10px;
+  border-radius: 3px;
+  margin-top: 8px;
+  font-size: .8em;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+}
+
